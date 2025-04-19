@@ -1,0 +1,17 @@
+# ---- Minimal event template ----
+id: ELEC-000               # unique ID (string)
+subsystem: Engine Bay      # where it happens (free text)
+
+ai_opening: >-
+  Uh‑oh—power bus fault detected.
+narration:                  # one‑sentence outcomes for your first loop
+  success: Engines hum back to life.
+  fail:    Engines offline with a thunk!
+
+# ---- OPTIONAL fields you can ignore for Loop 0 ----
+# difficulty:
+#   easy:   "Color‑coded wires C & D appear fused..."
+#   medium: "Scorched leads near the forward bus..."
+#   hard:   "Power bus fault detected; no further data."
+# follow_up: ELEC-001      # chain event (future feature)
+# severity: Major          # Minor / Major / Critical

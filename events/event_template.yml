@@ -1,0 +1,15 @@
+# ---- Minimal event template ----
+id: ELEC-000               # unique ID (string). ELEC can be replaced with any mechanical prefix, using a 4 letter code. EG: MECH, PLUM, etc, followed by a dash and unique 3 digit number (easiest to use sequentially)
+name: Power Bus Fault     # name of the event (string) name of the event, less code and more human readable - potentially the id is in a manual, and this is the title of the event
+type: Electrical          # type of event (string) again, might be used in potential manual - or an easy way to search events/list them
+subsystem: Engine Bay      # where it happens (free text) - this will corospond to the location in the ship - which is a free text field, but should be consistent with the ship map
+description: >-                # description of the event (free text) This will be the short description of the event that appears in the event log
+  A power bus fault has been detected in the engine bay.
+
+ai_opening: >-           # what the ships onboard AI says when the event triggers (free text) this will be more helpful or less helpful depending on the difficulty level (To be implemented)
+  Uh‑oh—power bus fault detected. 
+
+narration:                  # one‑sentence outcomes for your first loop
+  success: Engines hum back to life.
+  fail:    Engines offline with a thunk!
+
