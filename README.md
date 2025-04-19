@@ -189,7 +189,25 @@ These are ambitious or experimental features not required for a 1.0 release. Par
 
 ## Roadmap
 
-- Actually start the project.
+### Loop 1 (Core Console) - COMPLETED
+
+- Features:
+  - Random event selection with severity weighting
+  - Three difficulty levels (Easy/Medium/Hard)
+    - Easy: 55% success chance (10+)
+    - Medium: 45% success chance (12+)
+    - Hard: 35% success chance (14+)
+  - Test mode for automated verification
+  - Six event types covering all ship systems
+  - Clean fault→diagnose→resolve gameplay loop
+
+### Loop 2 (Minimal GUI) - NEXT
+
+- Planned Features:
+  - PySimpleGUI interface
+  - Event list display
+  - Roll button
+  - Outcome display
 
 ## License
 

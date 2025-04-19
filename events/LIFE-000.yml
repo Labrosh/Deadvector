@@ -1,0 +1,26 @@
+id: LIFE-000
+subsystem: Life Support
+severity: Critical
+
+ai_opening: >-
+  Emergency—CO₂ scrubbers malfunctioning.
+
+difficulty:
+  easy: >-
+    Filter bank A shows 98% saturation. Replace immediately.
+  medium: >-
+    Scrubber efficiency dropping in sector 4.
+  hard: >-
+    Life support systems degrading. Critical failure imminent.
+
+narration:
+  critical_success: >-
+    You restore full life support with upgraded filters!
+  success: >-
+    Scrubbers come back online with steady readings.
+  partial_success: >-
+    Systems stabilize but at reduced capacity.
+  fail: >-
+    Scrubbers fail completely - emergency oxygen engaged.
+
+follow_up: LIFE-001

@@ -1,0 +1,26 @@
+id: NAV-000
+subsystem: Bridge
+severity: Major
+
+ai_opening: >-
+  Alert—navigation systems malfunctioning!
+
+difficulty:
+  easy: >-
+    Gyro calibration shows 15° drift in axis 2.
+  medium: >-
+    Star tracker alignment inconsistent.
+  hard: >-
+    Navigation systems offline. Manual input required.
+
+narration:
+  critical_success: >-
+    You not only fix the systems but improve their accuracy!
+  success: >-
+    Navigation systems come back online.
+  partial_success: >-
+    Basic functions restored but drift remains.
+  fail: >-
+    Systems remain offline - manual navigation required.
+
+follow_up: NAV-001

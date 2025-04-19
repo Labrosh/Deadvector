@@ -1,0 +1,26 @@
+id: REAC-000
+subsystem: Reactor Core
+severity: Critical
+
+ai_opening: >-
+  Danger—reactor temperature spiking!
+
+difficulty:
+  easy: >-
+    The primary coolant valve is stuck at 25% open.
+  medium: >-
+    Neutron flux readings unstable in sector 3.
+  hard: >-
+    Reactor instability detected. Immediate action required.
+
+narration:
+  critical_success: >-
+    You stabilize the reactor and optimize its output!
+  success: >-
+    The reactor hums back to safe operating levels.
+  partial_success: >-
+    The crisis is averted but the reactor runs hot.
+  fail: >-
+    Emergency shutdown initiated - power levels critical.
+
+follow_up: REAC-001

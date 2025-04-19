@@ -1,0 +1,26 @@
+id: MECH-000
+subsystem: Cargo Hold
+severity: Minor
+
+ai_opening: >-
+  Warning—cargo bay door mechanism jammed.
+
+difficulty:
+  easy: >-
+    The manual release lever is clearly stuck under debris.
+  medium: >-
+    Hydraulic fluid is leaking near actuator cylinder 3.
+  hard: >-
+    Cargo door mechanism failure. Cause unknown.
+
+narration:
+  critical_success: >-
+    You not only fix the door but reinforce the mechanism!
+  success: >-
+    The door slides open with a satisfying hiss.
+  partial_success: >-
+    The door opens but the mechanism sounds strained.
+  fail: >-
+    The door remains stuck with a worrying creak.
+
+follow_up: MECH-001

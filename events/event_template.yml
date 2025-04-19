@@ -1,15 +1,67 @@
-# ---- Minimal event template ----
-id: ELEC-000               # unique ID (string). ELEC can be replaced with any mechanical prefix, using a 4 letter code. EG: MECH, PLUM, etc, followed by a dash and unique 3 digit number (easiest to use sequentially)
-name: Power Bus Fault     # name of the event (string) name of the event, less code and more human readable - potentially the id is in a manual, and this is the title of the event
-type: Electrical          # type of event (string) again, might be used in potential manual - or an easy way to search events/list them
-subsystem: Engine Bay      # where it happens (free text) - this will corospond to the location in the ship - which is a free text field, but should be consistent with the ship map
-description: >-                # description of the event (free text) This will be the short description of the event that appears in the event log
-  A power bus fault has been detected in the engine bay.
+# Dead Vector Event Template
+# --------------------------
+# Required Fields (all must be populated):
 
-ai_opening: >-           # what the ships onboard AI says when the event triggers (free text) this will be more helpful or less helpful depending on the difficulty level (To be implemented)
-  Uh‑oh—power bus fault detected. 
+# Unique identifier (4-letter system prefix + 3 digits)
+# Number sequentially within each prefix group:
+# Example: ELEC-001, ELEC-002, PLUM-001, PLUM-002
+id: PREFIX-000
 
-narration:                  # one‑sentence outcomes for your first loop
-  success: Engines hum back to life.
-  fail:    Engines offline with a thunk!
+# Human-readable title for manuals/logs
+# Example: "Power Bus Fault", "Coolant Leak"
+name: Event Name
 
+# Broad category for filtering/organization
+# Example: Electrical, Mechanical, Structural, Biological
+type: SystemType
+
+# Ship area where event occurs (must match ship map)
+# Example: Engine Bay, Bridge, Cargo Hold, Jump Spine Chamber
+subsystem: Location
+
+# Impact level - affects damage and time pressure
+# Options: Minor, Major, Critical
+severity: Minor
+
+# Event Description (appears in logs)
+description: >-
+  Brief technical description of the malfunction.
+  Example: "A power bus fault has been detected in the engine bay."
+
+# AI Responses by Difficulty Level
+difficulty:
+  easy: >-
+    Detailed diagnostic information with clear instructions.
+    Example: "Color-coded wires C & D appear fused at junction box 12B."
+  medium: >-
+    Moderate diagnostic hints requiring some expertise.
+    Example: "Scorched leads near the forward bus suggest cascading failure."
+  hard: >-
+    Minimal information - requires expert troubleshooting.
+    Example: "Power bus fault detected. No further data available."
+
+# AI Initial Alert (what the ship's AI says when event triggers)
+ai_opening: >-
+  The AI's initial announcement when event triggers.
+  Example: "Uh-oh—power bus fault detected."
+
+# Outcome Narrations (what the AI says for each result type)
+narration:
+  critical_success: >-
+    Exceptional success (roll >= threshold + 7)
+    Example: "You not only fix the bus but optimize the entire power grid!"
+  success: >-
+    Standard success (roll >= threshold)
+    Example: "Engines hum back to life with steady power flow."
+  partial_success: >-
+    Mixed result (threshold - 5 <= roll < threshold)
+    Example: "The bus is patched but you notice another fault developing..."
+  fail: >-
+    Failure (roll < threshold - 5)
+    Example: "Engines offline with a thunk! The failure cascades."
+
+# Optional Fields:
+
+# ID of chained follow-up event (leave blank if none)
+# Example: ELEC-002 (for cascading failures)
+follow_up: EVENT-XXX

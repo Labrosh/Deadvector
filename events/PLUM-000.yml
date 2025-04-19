@@ -1,0 +1,26 @@
+id: PLUM-000
+subsystem: Living Quarters
+severity: Major
+
+ai_opening: >-
+  Alert—water pressure dropping in crew quarters.
+
+difficulty:
+  easy: >-
+    The leak is clearly coming from junction valve 4B.
+  medium: >-
+    Moisture detected near the aft plumbing manifold.
+  hard: >-
+    Water pressure anomaly detected. Location unknown.
+
+narration:
+  critical_success: >-
+    You fix the leak and improve the filtration system!
+  success: >-
+    Water pressure stabilizes throughout the quarters.
+  partial_success: >-
+    The main leak is fixed but a small drip remains.
+  fail: >-
+    Pipes burst, flooding the compartment with coolant.
+
+follow_up: PLUM-001
